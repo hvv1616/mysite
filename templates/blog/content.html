@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %}blog article{% endblock %}
+
+{% block content %}
+<div class="row text-center vertical-middle-sm">
+    <h1>记录标题：{{ article.title }}</h1>
+</div>
+<div class="row">
+    <div class="col-xs-12 cal-md-8">
+        <p class="text.center"><span>用户：{{ article.author.username }}</span><span style="margin-left:200px">发布时间：{{ publish }}</span> </p>
+        <div>内容：{{ article.body }}</div>
+    </div>
+    <div class="col-xs-6 col-md-4">
+        <h6>底部描述</h6>
+        <p>底部描述内容</p>
+        <a class="navbar-brand" href="{% url 'blog:blog_title' %}"><img src="{% static 'images/gbase8a.png' %}" width="200px"></a>
+    </div>
+</div>
+{% endblock %}
