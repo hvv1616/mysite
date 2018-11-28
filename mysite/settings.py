@@ -130,9 +130,10 @@ LOGIN_REDIRECT_URL = '/blog/'
 # LOGOUT_REDIRECT_URL = '/accounts/login/'
 
 
-EMAIL_HOST='smtp.tom.com'
+EMAIL_HOST='imap.tom.com'
 EMAIL_HOST_USER='hvv@tom.com'
 EMAIL_HOST_PASSWORD='redfox'
-EMAIL_PORT=587
-EMAIL_USE_TLS=True
+EMAIL_PORT= 993
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = True
 DEFAULT_FROM_EMAIL='hvv@tom.com'
