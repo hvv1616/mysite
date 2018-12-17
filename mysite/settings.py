@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'hello',
     'blog',
-    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -57,7 +56,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates'),],
+        'DIRS': [os.path.join(BASE_DIR, 'templates'), ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -127,12 +126,12 @@ STATICFILES_DIRS = [
 
 # 登录后转向的网页地址可在此设置，也可以在app的urls.py中设置
 LOGIN_REDIRECT_URL = '/blog/'
-# LOGOUT_REDIRECT_URL = '/accounts/login/'
+LOGOUT_REDIRECT_URL = '/accounts/login/'
 
 
-EMAIL_HOST='smtp.tom.com'
-EMAIL_HOST_USER='hvv@tom.com'
-EMAIL_HOST_PASSWORD='redfox'
-EMAIL_PORT=587
-EMAIL_USE_TLS=True
-DEFAULT_FROM_EMAIL='hvv@tom.com'
+EMAIL_HOST = 'smtp.tom.com'
+EMAIL_HOST_USER = 'hvv@tom.com'
+EMAIL_HOST_PASSWORD = 'Hell@Hell0'
+EMAIL_PORT = 25
+EMAIL_USE_TLS = False
+DEFAULT_FROM_EMAIL = 'hvv@tom.com'
