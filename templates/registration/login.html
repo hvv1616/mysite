@@ -7,9 +7,9 @@
 {% block content %}
 <div class="row text-center vertical-middle-sm">
     <h1>登录</h1>
-    <p>非用户请<strong><a href="{% url 'accounts:user_register' %}">注册</a></strong></p>
+    <p>非用户请<strong><a href="#">注册</a></strong></p>
     <p>请输入用户名和密码</p>
-    <form class="form-horizontal" action="{% url 'accounts:user_login' %}" method="post">{% csrf_token %}
+    <form class="form-horizontal" action="{% url 'login' %}" method="post">{% csrf_token %}
         <div class="form-group">
             <label for="{{ form.username.id_for_label }}" class="col-md-5 control-label" style="color:red"><span class="glyphicon gl glyphicon-user"></span>用户名</label>
             <div class="col-md-6 text-left">{{ form.username }}</div>
