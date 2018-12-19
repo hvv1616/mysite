@@ -7,7 +7,7 @@
 {% block content %}
 <div class="row text-center vertical-middle-sm">
     <h1>注册</h1>
-    <p>如已经有用户，<strong><a href="{% url 'accounts:user_login' %}">请登录</a></strong></p>
+    <p>如已经有用户，<strong><a href="{% url 'login' %}">请登录</a></strong></p>
     <p>如没有用户请继续注册</p>
     <form class="form-horizontal" action="." method="post">{% csrf_token %}
         <div class="form-group">
